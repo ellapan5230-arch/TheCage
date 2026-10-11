@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Please Don't Leave</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: #292020;
+            color: #B01515;
+            font-family: "Times New Roman", serif;
+            overflow: hidden;
+        }
+
+        /* 重複的牢籠背景 */
+        .background {
+            position: fixed;
+            inset: -50px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            transform: rotate(-8deg) scale(1.15);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .cage {
+            height: 220px;
+            border: 3px solid #5c1717;
+            border-radius: 48% 48% 8% 8%;
+            position: relative;
+            box-shadow: inset 0 0 15px #150909;
+        }
+
+        .cage::before {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            border: 3px solid #5c1717;
+            border-radius: 50%;
+        }
+
+        .cage::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-left: 3px solid #5c1717;
+            border-right: 3px solid #5c1717;
+            box-shadow:
+                15px 0 #5c1717,
+                -15px 0 #5c1717;
+        }
+
+        /* 英文文字區域 */
+        .content {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(
+                ellipse,
+                rgba(41, 32, 32, 0.97) 0%,
+                rgba(41, 32, 32, 0.8) 40%,
+                transparent 100%
+            );
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 2.2;
+            letter-spacing: 2px;
+            margin: 0;
+            color: #B01515;
+            text-shadow: 0 0 8px #3d0808;
+        }
+
+        .ending {
+            margin-top: 25px;
+        }
+
+        @media (max-width: 600px) {
+            .background {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+
+            .cage {
+                height: 180px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 2.2;
+                letter-spacing: 1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+        <div class="cage"></div>
+    </div>
+
+    <main class="content">
+        <p>
+            Please don't leave.<br>
+            I don't mind the cold.<br>
+            I don't mind the dark.<br>
+            I don't even mind being alone.
+        </p>
+
+        <p class="ending">
+            So, if you ever find this,<br>
+            please—<br><br>
+            Don't leave me here.
+        </p>
+    </main>
+
+</body>
+</html>
